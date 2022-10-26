@@ -1,0 +1,32 @@
+.nav-product .nav-link {
+    @apply text-zinc-550 hover:text-black hover:border-b-4 hover:border-black;
+}
+
+.nav-product .nav-link.active{
+    @apply text-black border-b-4 border-black;
+}
+
+.nav-set-product .nav-link .text{
+    @apply border-[1px] border-zinc-850 text-zinc-610 hover:bg-zinc-850 hover:text-white py-4 md:py-7 mt-3 text-sm md:text-base font-raj font-bold;
+}
+.nav-set-product .nav-link .text div{
+    @apply last:font-light last:text-xs last:md:text-sm;
+}
+
+.nav-set-product .nav-link.active .text{
+    @apply bg-zinc-850 text-white;
+}
+.nav-header.active{
+    @apply md:bg-white md:text-green-550;
+}
+.nav-header{
+    @apply text-base py-3 md:py-8 px-[26px] font-semibold hover:md:bg-white hover:md:text-green-550;
+}
+
+.breadcumb{
+    @apply flex flex-wrap;
+}
+
+.breadcumb li{
+    @apply font-thin text-[10px] md:text-sm after:content-['-'] last:font-medium last:after:content-none after:mx-1;
+}

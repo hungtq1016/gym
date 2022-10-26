@@ -1,0 +1,87 @@
+.scrollbar::-webkit-scrollbar {
+    @apply h-2 ;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-[#707070] rounded
+    
+}
+
+#hot-item .products button{
+    @apply hidden;
+}
+
+.casestudy .slick-slide,.partners .slick-slide,.products .slick-slide{
+    @apply mx-2;
+}
+.casestudy button{
+    @apply top-[174px];
+}
+.casestudy button.next{
+    @apply -right-12;
+}
+.casestudy button.prev{
+    @apply -left-12;
+}
+
+.partners button{
+    @apply top-1/2;
+}
+.partners button svg{
+    @apply fill-black;
+}
+.partners button.next{
+    @apply -right-6;
+}
+.partners button.prev{
+    @apply -left-6;
+}
+
+.product-nav .slick-slide{
+    @apply mx-1
+}
+.product-nav button{
+    @apply top-1/2;
+}
+.product-nav button svg{
+    @apply fill-black;
+}
+.product-nav button.next{
+    @apply -right-7;
+}
+.product-nav button.prev{
+    @apply -left-7;
+}
+
+.slider-4-4-nav .slick-slide{
+    @apply mx-1;
+}
+.slider-4-4-nav{
+    @apply relative mx-auto w-11/12 md:w-10/12;
+}
+
+.slider-4-4-nav .prev,
+.slider-4-4-nav .next{
+    @apply absolute top-1/2 -translate-y-1/2;
+}
+
+.slider-btn{
+    @apply bg-black !w-auto !inline;
+}
+
+.slider-btn img{
+    @apply opacity-40 border-[3px]  focus:border-black  hover:border-[3px] hover:border-black hover:opacity-100;
+} 
+
+.slick-current .slider-btn img{
+    @apply border-[3px] border-black opacity-100;
+}
+
+.slider-container{
+    @apply max-w-[100vh] w-full overflow-hidden;
+}

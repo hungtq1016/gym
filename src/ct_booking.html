@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking form | ECOLECO FITNESS</title>
+  </head>
+  <body>
+    <header>
+      <div id="header" class="absolute top-0 mx-auto w-full shadow md:fixed left-0 right-0 bg-white z-40">
+        <div id="logo" class="absolute top-2 left-2 z-50 md:top-8 md:left-2 lg:top-12 lg:left-24">
+          <a href="/">
+            <img src="assets/images/logo.png" alt="logo" class="w-32 md:w-8/12 lg:w-full" />
+          </a>
+        </div>
+        <div class="mx-auto max-w-lg bg-white header-container ">
+          <div class="flex items-center justify-end gap-x-2 md:pt-[30px] collapse sp_nav" id="contact-header">
+            <a href="login.html">
+              <div class="w-[38px] items-center gap-x-2 space-y-2 md:flex md:w-auto md:space-y-0">
+                <!-- SVG/Icon-Keyhole -->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15"
+                  height="22px" viewBox="0 0 13.6 20" class="mx-auto">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect id="Rectangle_1820" data-name="Rectangle 1820" width="15" height="20px" />
+                    </clipPath>
+                  </defs>
+                  <g id="Group_5953" data-name="Group 5953" clip-path="url(#clip-path)">
+                    <path id="Path_10978" data-name="Path 10978"
+                      d="M12.94,19.669H.863A.842.842,0,0,1,0,18.85c0-3.054,1.607-5.925,3.163-7.986A5.893,5.893,0,0,1,.569,6.016,6.187,6.187,0,0,1,6.9,0,6.507,6.507,0,0,1,9.5.533.8.8,0,0,1,9.93,1.618a.882.882,0,0,1-1.143.406A4.72,4.72,0,0,0,6.9,1.639,4.5,4.5,0,0,0,2.295,6.016,4.342,4.342,0,0,0,4.81,9.908a.827.827,0,0,1,.449.552.789.789,0,0,1-.161.681A14.034,14.034,0,0,0,1.771,18.03H12.032a14.035,14.035,0,0,0-3.327-6.889.787.787,0,0,1-.161-.681.827.827,0,0,1,.449-.552,4.342,4.342,0,0,0,2.516-3.893,4.19,4.19,0,0,0-.61-2.172.8.8,0,0,1,.317-1.119.888.888,0,0,1,1.178.3,5.77,5.77,0,0,1,.84,2.991,5.893,5.893,0,0,1-2.593,4.849C12.2,12.925,13.8,15.8,13.8,18.85a.842.842,0,0,1-.863.82"
+                      transform="translate(-0.084)" />
+                  </g>
+                </svg>
+                <div class="truncate text-clip text-[9px] font-semibold md:text-sm">会員の方はコチラ</div>
+              </div>
+            </a>
+            <a href="simulation.html" id="simulation"
+              class="md:bg-green-550 border-x-2 border-black md:border-none md:py-3 md:px-4 md:text-white h-t-f">
+              <div class="justify-center space-y-3 py-1 md:flex md:items-center md:gap-2 md:space-y-0 md:py-0">
+                <!-- SVG/Icon-Calculator -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="20px"
+                  class="mx-auto fill-black md:fill-white">
+                  <path
+                    d="M336 0h-288C22.38 0 0 22.38 0 48v416C0 489.6 22.38 512 48 512h288c25.62 0 48-22.38 48-48v-416C384 22.38 361.6 0 336 0zM64 208C64 199.2 71.2 192 80 192h32C120.8 192 128 199.2 128 208v32C128 248.8 120.8 256 112 256h-32C71.2 256 64 248.8 64 240V208zM64 304C64 295.2 71.2 288 80 288h32C120.8 288 128 295.2 128 304v32C128 344.8 120.8 352 112 352h-32C71.2 352 64 344.8 64 336V304zM224 432c0 8.801-7.199 16-16 16h-128C71.2 448 64 440.8 64 432v-32C64 391.2 71.2 384 80 384h128c8.801 0 16 7.199 16 16V432zM224 336c0 8.801-7.199 16-16 16h-32C167.2 352 160 344.8 160 336v-32C160 295.2 167.2 288 176 288h32C216.8 288 224 295.2 224 304V336zM224 240C224 248.8 216.8 256 208 256h-32C167.2 256 160 248.8 160 240v-32C160 199.2 167.2 192 176 192h32C216.8 192 224 199.2 224 208V240zM320 432c0 8.801-7.199 16-16 16h-32c-8.799 0-16-7.199-16-16v-32c0-8.801 7.201-16 16-16h32c8.801 0 16 7.199 16 16V432zM320 336c0 8.801-7.199 16-16 16h-32c-8.799 0-16-7.199-16-16v-32C256 295.2 263.2 288 272 288h32C312.8 288 320 295.2 320 304V336zM320 240C320 248.8 312.8 256 304 256h-32C263.2 256 256 248.8 256 240v-32C256 199.2 263.2 192 272 192h32C312.8 192 320 199.2 320 208V240zM320 144C320 152.8 312.8 160 304 160h-224C71.2 160 64 152.8 64 144v-64C64 71.2 71.2 64 80 64h224C312.8 64 320 71.2 320 80V144z" />
+                </svg>
+                <div class="text-xs font-semibold md:text-sm"><span class="hidden md:inline">大型</span>見積シミュレーション</div>
+              </div>
+            </a>
+            <a href="contact.html" id="advise" class="md:bg-orange-550 md:py-3 md:px-4 md:text-white h-t-f">
+              <div class="justify-center space-y-3 py-1 md:flex md:items-center md:gap-2 md:space-y-0 md:py-0">
+                <!-- SVG/Icon-Book -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 17.93 22.579"
+                  class="mx-auto fill-black md:fill-white">
+                  <path id="Path_10982" data-name="Path 10982"
+                    d="M16.631.254a2.482,2.482,0,0,0-2.488.177L12.009,1.785a1.117,1.117,0,0,0-.338,1.584,1.22,1.22,0,0,0,1.648.325l2.155-1.367.048-.032a.038.038,0,0,1,.022-.006h.007V14.735L8.968,19.951,2.379,14.735,2.368,2.3a.034.034,0,0,1,.044,0l.046.031L7.775,5.716V16.092a1.191,1.191,0,0,0,2.379,0V5.1a1.132,1.132,0,0,0-.532-.953L3.792.431A2.482,2.482,0,0,0,1.3.253,2.253,2.253,0,0,0,0,2.276v13a1.127,1.127,0,0,0,.434.883l7.775,6.155h0a1.117,1.117,0,0,0,.14.092l.051.03a1.265,1.265,0,0,0,.147.064l.055.018a1.2,1.2,0,0,0,.162.04h0a1.164,1.164,0,0,0,.956-.24L17.5,16.157a1.127,1.127,0,0,0,.433-.882V2.28a2.255,2.255,0,0,0-1.3-2.026"
+                    transform="translate(0 0)" />
+                </svg>
+                <div class="text-xs font-semibold md:text-sm">開業/導入無料相談</div>
+              </div>
+            </a>
+            <a href="prolist.html" id="list" class="md:bg-zinc-850 md:py-3 md:px-4 md:text-white">
+              <div class="items-center gap-x-2 space-y-2 md:flex md:space-y-0">
+                <!-- SVG/Icon-List -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22px" height="25px"
+                  class="mx-auto fill-black md:fill-white">
+                  <path
+                    d="M88 48C101.3 48 112 58.75 112 72V120C112 133.3 101.3 144 88 144H40C26.75 144 16 133.3 16 120V72C16 58.75 26.75 48 40 48H88zM480 64C497.7 64 512 78.33 512 96C512 113.7 497.7 128 480 128H192C174.3 128 160 113.7 160 96C160 78.33 174.3 64 192 64H480zM480 224C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H192C174.3 288 160 273.7 160 256C160 238.3 174.3 224 192 224H480zM480 384C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H192C174.3 448 160 433.7 160 416C160 398.3 174.3 384 192 384H480zM16 232C16 218.7 26.75 208 40 208H88C101.3 208 112 218.7 112 232V280C112 293.3 101.3 304 88 304H40C26.75 304 16 293.3 16 280V232zM88 368C101.3 368 112 378.7 112 392V440C112 453.3 101.3 464 88 464H40C26.75 464 16 453.3 16 440V392C16 378.7 26.75 368 40 368H88z" />
+                </svg>
+                <div class="text-[9px] md:text-sm md:font-semibold">検討リスト</div>
+              </div>
+            </a>
+            <button class="toggle closing md:!hidden"></button>
+          </div>
+          <nav class="relative hidden bg-black text-white md:bg-white md:pb-3 md:pt-8 md:text-black show md:flex justify-between"id="navbar">
+            <a href="/" class="hidden md:block">
+              <div class="flex justify-between items-center collapse border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">Home</span>
+              </div>
+            </a>
+            <a href="#" class="sp_dropdown pc_toggle" data-toggle="sub_dropdown">
+              <div class="flex justify-between items-center collapse border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">取扱い製品</span>
+                <div class="toggle closing md:!hidden"></div>
+              </div>
+            </a>
+            <a href="monitor.html">
+              <div class="flex justify-between items-center border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  選ばれる理由
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <a href="setproduct.html">
+              <div class="flex justify-between items-center border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  導入実績
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <a href="order.html">
+              <div class="flex justify-between items-center border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  ご購入の流れ
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <a href="monitor.html">
+              <div class="flex justify-between items-center border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  モニター店舗
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <a href="blog.html">
+              <div class="flex justify-between items-center border-b-2 border-white mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  カタログ
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <a href="faq.html">
+              <div class="flex justify-between items-center mx-4">
+                <span class="hover:border-green-550 md:border-b-2 py-4 text-xl font-semibold duration-100 border-white md:p-0 md:text-base md:font-bold ">
+                  各種お問合せ
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12"class="block md:hidden">
+                  <path id="Path_11254" data-name="Path 11254"  d="M153.762,371.329l-.016.017-.03-.034-3.593-4.016h-3.536l4.077,4.557,1.283,1.434.03.034-1.267,1.417-4.078,4.557h3.536l3.593-4.016,1.768-1.976Z" transform="translate(-146.587 -367.296)" fill="#fff" />
+                </svg>
+              </div>
+            </a>
+            <button class="pc_toggle hidden md:block" data-toggle="search">
+              <!-- SVG/Icon-Arrow-Search -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25px"
+                class="fill-current">
+                <path
+                  d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+        <div class="mx-auto hidden max-w-lg bg-black px-5 py-6 md:bg-zinc-100 search">
+          <form action="#">
+            <div class="flex">
+              <button type="submit" class="bg-white px-3">
+                <!-- SVG/Icon-Search -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                  <path
+                    d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z" />
+                </svg>
+              </button>
+              <input type="search" name="search" id="search-bar" placeholder="キーワードを入力して検索"
+                class="focus:ring-green-550 w-full border-none border-transparent py-3 text-black focus:border-transparent focus:ring-1" />
+            </div>
+          </form>
+        </div>
+        <div class="sub_dropdown show hidden">
+          <div class="bg-black md:bg-zinc-100">
+            <div class="mx-auto max-w-lg">
+              <ul class="mx-10 block justify-between border-b text-left md:mx-[25px] md:flex md:text-center">
+                <li class="nav-header active" hover-target="1"><a href="weightstack.html">部位別に探す</a></li>
+                <li class="nav-header" hover-target="2"><a href="expert.html">Expert Model</a></li>
+                <li class="nav-header" hover-target="3"><a href="h&pmodel.html">Home&Personal Model</a></li>
+                <li class="nav-header" hover-target="4"><a href="h&pmodel.html">Wellness Model</a></li>
+                <li class="nav-header" hover-target="5"><a href="expert.html">Outlet</a></li>
+                <li class="nav-header" hover-target="6"><a href="setproduct.html">セット商品</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mx-auto flex max-w-lg justify-between py-5 md:pt-12 md:pb-[60px] hover-nav">
+            <div class="absolute md:relative top-0 left-0 right-0 md:block md:w-auto " id="hover-container">
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="1">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">部位別に探す</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4 mt-4 mx-6 md:pl-0 md:mt-0">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block" />
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>胸</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>腕・肩</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>背中</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>脚</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>腹筋・その他</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="2">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">Expert Model</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Weight Stack</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Plate Loaded</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Accessory</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Others</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="3">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">Home&Personal Model</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Home Model</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Expert Model</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>Starter Model</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="4">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">Wellness Model</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>       
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>       
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>       
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="5">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">Outlet</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="category hidden bg-black z-40 h-screen md:h-auto  md:bg-transparent md:z-10" data-hover="6">
+                <div class="return md:hidden flex gap-x-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-bold py-1">セット商品</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="category.html" class="border-b border-white md:border-0 py-2">
+                    <img src="assets/images/product.jpg" alt="product" class="h-40 w-40 rounded hidden md:inline-block"/>
+                    <div class="md:mt-4 flex gap-x-1 items-center justify-between md:justify-start">
+                      <div>アクセサリー</div>
+                      <!-- SVG/Icon-Arrow-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-4 fill-white">
+                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+            <ul class="mx-10 md:mx-0 md:pl-20 md:border-l border-zinc-650">
+              <li class="py-2"><a href="contact.html" class="text-sm font-light">お得なセットアイテムはこちら</a></li>
+              <li class="py-2"><a href="support.html" class="text-sm font-light">アフターサポートはこちら</a></li>
+              <li class="py-2"><a href="monitor.html" class="text-sm font-light">モニター店舗とは？</a></li>
+              <li class="py-2"><a href="casestudy.html" class="text-sm font-light">ショールーム一覧</a></li>
+              <li class="py-2"><a href="support.html" class="text-sm font-light">保証について</a></li>
+              <li class="py-2"><a href="faq.html" class="text-sm font-light">Q＆A</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="relative mt-14 md:mt-[153px]">
+      <div class="absolute z-40 hidden h-full w-full bg-black opacity-80" id="cover"></div>
+      <div id="breadcumb" class="mx-4 max-w-lg py-4 md:mx-auto md:pt-14 md:pb-7">
+        <ul class="breadcumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>Booking form</li>
+        </ul>
+      </div>
+      <div class="py-5 text-center">
+        <div class="font-raj text-[32px] md:text-5xl font-bold uppercase">Booking form</div>
+        <div class="mt-7 text-xs font-light md:text-sm">見学予約お問い合わせ</div>
+        <div class="mt-9 text-xs text-zinc-590 md:mt-14 md:text-lg">
+            下記よりご希望の予約内容を入力の上お問い合わせください。<br>
+            担当よりスケジュールを確認の上、ご連絡をさせて頂きます。
+        </div>
+      </div>
+      <section id="contact-section">
+        <div class="mx-2 max-w-lg py-4 md:mx-auto">
+          <div class="mx-2 bg-zinc-100 py-11">
+            <form action="" method="post" class="mx-2 md:mx-[90px]">
+              <div class="text-center text-lg md:text-[28px]">見学予約お問い合わせ</div>
+              <div class="mt-11 flex flex-wrap gap-y-4 text-left md:mt-24 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-6">
+                <div class="w-full">
+                  <label for="company-name" class="text-sm md:text-lg">会社名</label>
+                  <input type="text" id="company-name" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）エーイーシー株式会社" />
+                </div>
+                <div class="w-full">
+                  <label for="name" class="text-sm md:text-lg">氏名*</label>
+                  <input type="text" id="name" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）田中太郎" required />
+                </div>
+                <div class="w-full">
+                  <label for="zipcode" class="text-sm md:text-lg">郵便番号*</label>
+                  <input type="text" id="zipcode" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）4860945" required />
+                </div>
+                <div class="w-full">
+                  <label for="address" class="text-sm md:text-lg">住所*</label>
+                  <input type="text" id="address" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）愛知県春日井市勝川町5丁目115番" required />
+                </div>
+                <div class="w-full">
+                  <label for="phonenumber" class="text-sm md:text-lg">電話番号*</label>
+                  <input type="text" id="phonenumber" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）09012345678" required />
+                </div>
+                <div class="w-full">
+                  <label for="email" class="text-sm md:text-lg">メールアドレス*</label>
+                  <input type="email" id="email" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="例）info@ecoleco.net" required />
+                </div>
+                <div class="col-span-2">
+                  <div class="text-sm md:text-lg ">見学希望店舗をお選びください。</div>
+                  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-7">   
+                    <div class="flex items-center">    
+                        <input id="kob-fitness" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="kob-fitness" class="ml-3 text-sm text-zinc-350"> 愛知県 コブフィットネス </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="studio-polm" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="studio-polm" class="ml-3 text-sm text-zinc-350"> 東京都トレーニングスタジオポルム </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="Donki-Shin-Anjo" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="Donki-Shin-Anjo" class="ml-3 text-sm text-zinc-350"> 愛知県 PUMP UP MEGAドンキ新安城店 </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="hip-school" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="hip-school" class="ml-3 text-sm text-zinc-350"> 埼玉県 Hip School </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="new-bro-fitness" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="new-bro-fitness" class="ml-3 text-sm text-zinc-350"> 岐阜県 NEW BRO FITNESS </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="fire-fit" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="fire-fit" class="ml-3 text-sm text-zinc-350"> 新潟県 FIRE FIT </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="evol-gym" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="evol-gym" class="ml-3 text-sm text-zinc-350"> 岡山県 EVOL GYM </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="eternal-fit" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="eternal-fit" class="ml-3 text-sm text-zinc-350"> 北海道エターナルフィット </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="dear-life" name="store-to-visit" type="radio" class="h-5 w-5 border-zinc-650" />
+                        <label for="dear-life" class="ml-3 text-sm text-zinc-350"> 東京都 Dear Life </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full">
+                    <label for="first-tour" class="text-sm md:text-lg">第一希望日</label>
+                    <input type="date" id="first-tour" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm" />
+                </div>
+                <div class="w-full">
+                    <label for="first-tour-time" class="text-sm md:text-lg">第一希望見学時間</label>
+                    <select id="first-tour-time" class="mt-2 w-full rounded py-4 md:py-5 text-xs text-zinc-350 md:text-sm">
+                      <option value="1">10:00</option>
+                    </select>
+                </div>
+                <div class="w-full">
+                    <label for="second-tour" class="text-sm md:text-lg">第二希望日</label>
+                    <input type="date" id="second-tour" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm" />
+                </div>
+                <div class="w-full">
+                    <label for="second-tour-time" class="text-sm md:text-lg">第二希望見学時間</label>
+                    <select id="second-tour-time" class="mt-2 w-full rounded py-4 md:py-5 text-xs text-zinc-350 md:text-sm">
+                      <option value="1">10:00</option>
+                    </select>
+                </div>
+                <div class="w-full">
+                    <label for="amount" class="text-sm md:text-lg">来訪予定人数</label>
+                    <input type="text" id="amount" class="mt-2 w-full rounded py-4 md:py-5 text-xs md:text-sm placeholder:text-zinc-350" placeholder="0"/>
+                    <div class="mt-4 text-sm text-red-600">※コロナウイルス感染拡大防止の為、2名以上のご来訪はご遠慮ください</div>
+                </div>
+                <div class="w-full">
+                    <label for="time-to-visit" class="text-sm md:text-lg">来訪目的をご選択下さい</label>
+                    <select id="time-to-visit" class="mt-2 w-full rounded py-4 md:py-5 text-xs text-zinc-350 md:text-sm">
+                      <option value="1">10:00</option>
+                    </select>
+                </div>
+                <textarea name="other-time" id="other-time" class="col-span-2 mt-2 md:mt-8 w-full rounded text-sm placeholder:text-zinc-350 h-40 resize-none" placeholder="お電話のご希望日がございございましたら、ご記入ください。※平日10時～18時"></textarea>
+              </div>
+              <div class="mt-8 md:mt-11 text-center">
+                <input type="checkbox" name="agree" id="agree" required />
+                <label for="agree"><a href="#" class="text-sm text-sky-550 md:text-base">個人情報の取り扱いに</a> ついて同意しました。</label>
+              </div>
+              <div class="mt-9">
+                <button type="submit" class="bg-zinc-850 mx-auto w-full rounded py-4 text-lg font-bold text-white">送信する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="contact" class="text-center md:hidden">
+        <div id="contact-footer" class="grid grid-cols-3 border-t-2 border-black text-xs font-semibold">
+          <a href="tel:+0120994214" class="py-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21.407" height="28.02" viewBox="0 0 21.407 28.02"
+              class="mx-auto">
+              <path id="Path_11259" data-name="Path 11259"
+                d="M20.226,21.373a6.7,6.7,0,0,0-2.334-2.48,2.786,2.786,0,0,0-2.936.193A6.6,6.6,0,0,0,12.9,21.253a11.655,11.655,0,0,1-5.3-4.822,11.564,11.564,0,0,1-2-7.008A6.592,6.592,0,0,0,8.43,8.547,2.787,2.787,0,0,0,9.91,6,6.7,6.7,0,0,0,8.73,2.81,6.7,6.7,0,0,0,6.4.33,2.787,2.787,0,0,0,3.46.523a6.988,6.988,0,0,0-2.6,3.238A6.278,6.278,0,0,0,.521,4.877,8.628,8.628,0,0,0,.129,6.562c-.476,3.644.31,7.626,3.327,12.455s6.252,7.28,9.736,8.45a8.6,8.6,0,0,0,1.775.4,6.424,6.424,0,0,0,.9.135,6.99,6.99,0,0,0,4.059-.888,2.787,2.787,0,0,0,1.481-2.543,6.7,6.7,0,0,0-1.18-3.194"
+                transform="translate(0 0)" fill="#242424" />
+            </svg>
+            <div class="mt-3">お電話のでお問合せ</div>
+          </a>
+        </div>
+      </div>
+      <div class="bg-zinc-850 text-white">
+        <div class="max-w-lg md:mx-auto md:pt-[76px] md:pb-[26px]" id="footer-top">
+          <div class="mx-auto hidden max-w-[850px] text-center md:block">
+            <div class="flex justify-center gap-x-4">
+              <!-- SVG/Icon - talk -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="27.873" height="26.201"
+                class="fill-current">
+                <path
+                  d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z" />
+              </svg>
+              <div class="text-2xl font-bold uppercase">contact</div>
+            </div>
+            <div class="mt-5 mb-7 text-sm font-semibold">製品やお取引に関するご相談など、お気軽にご連絡ください</div>
+            <div class="grid grid-cols-1 gap-[50px] md:grid-cols-2">
+              <a href="tel:+0120994214" class="broder-white border">
+                <div class="mt-[26px] mb-5 text-sm font-semibold">お電話のでお問合せ</div>
+                <div class="flex items-center justify-center gap-x-4">
+                  <!-- SVG/Icon - Phone Number -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35.054" height="23" viewBox="0 0 35.054 23">
+                    <g id="フリーダイヤルのアイコン" transform="translate(0 -88.032)">
+                      <path id="Path_10984" data-name="Path 10984"
+                        d="M0,88.032v3.377a21.8,21.8,0,0,1,7.54,1.327q.623.232,1.207.5A19.847,19.847,0,0,1,11.6,92.2a22.191,22.191,0,0,1,5.926-.794A21.806,21.806,0,0,1,25.1,92.737q.623.232,1.207.5a19.863,19.863,0,0,1,2.854-1.03,22.2,22.2,0,0,1,5.894-.794V88.032Z"
+                        fill="#fff" />
+                      <path id="Path_10985" data-name="Path 10985"
+                        d="M320.59,211.169a4.1,4.1,0,0,0,6.4,3.4,4.1,4.1,0,0,0,1.81-3.4,3.5,3.5,0,0,0-.264-1.29,5.687,5.687,0,0,0-.817-1.392,10.377,10.377,0,0,0-3.024-2.521,11.158,11.158,0,0,0-2.483,1.9,6.166,6.166,0,0,0-1.413,2.163A3.426,3.426,0,0,0,320.59,211.169Z"
+                        transform="translate(-297.878 -109.506)" fill="#fff" />
+                      <path id="Path_10986" data-name="Path 10986"
+                        d="M30.572,176.14a8.987,8.987,0,0,1,2,3.174,6.123,6.123,0,0,1,.349,2,6.814,6.814,0,0,1-1.131,3.773,6.665,6.665,0,0,1-2.91,2.444,6.513,6.513,0,0,1-6.277-.623,6.74,6.74,0,0,1-2.4-2.968,6.842,6.842,0,0,1-.521-2.627,6.5,6.5,0,0,1,.759-2.958,10.041,10.041,0,0,1,2-2.627,13.815,13.815,0,0,1,1.433-1.2c-.346-.129-.7-.25-1.066-.361a18.405,18.405,0,0,0-5.287-.766,18.164,18.164,0,0,0-6.354,1.126,13.33,13.33,0,0,1,1.84,1.606,8.993,8.993,0,0,1,2,3.174,6.116,6.116,0,0,1,.349,2,6.816,6.816,0,0,1-1.131,3.773,6.668,6.668,0,0,1-2.91,2.444,6.513,6.513,0,0,1-6.277-.623,6.739,6.739,0,0,1-2.4-2.968,6.842,6.842,0,0,1-.52-2.627,6.5,6.5,0,0,1,.758-2.958,10.043,10.043,0,0,1,2-2.627,13.777,13.777,0,0,1,1.432-1.2c-.346-.129-.7-.25-1.066-.361A18.414,18.414,0,0,0,0,173.409V190.9H35.054V173.409a18.171,18.171,0,0,0-6.321,1.126A13.323,13.323,0,0,1,30.572,176.14Z"
+                        transform="translate(0 -79.872)" fill="#fff" />
+                      <path id="Path_10987" data-name="Path 10987"
+                        d="M64.118,211.169a4.1,4.1,0,0,0,6.4,3.4,4.1,4.1,0,0,0,1.81-3.4,3.512,3.512,0,0,0-.264-1.29,5.706,5.706,0,0,0-.817-1.392,10.386,10.386,0,0,0-3.024-2.521,11.149,11.149,0,0,0-2.483,1.9,6.166,6.166,0,0,0-1.413,2.163A3.423,3.423,0,0,0,64.118,211.169Z"
+                        transform="translate(-59.984 -109.506)" fill="#fff" />
+                    </g>
+                  </svg>
+                  <div class="text-2xl font-bold">0120-994-214</div>
+                </div>
+                <div class="mt-[18px] mb-[25px] text-[13px] font-light">営業時間：10：00～18：00（土日祝を除く）</div>
+              </a>
+              <a href="mailto:example@mail.com" class="broder-white border">
+                <div class="flex items-center justify-center gap-x-4">
+                  <!-- SVG/Icon - Mail -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="35.054" height="23"
+                    class="fill-current">
+                    <path
+                      d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" />
+                  </svg>
+                  <div class="my-[60px] text-2xl font-bold">メールでのお問合せ</div>
+                </div>
+              </a>
+            </div>
+            <div class="mb-8 mt-9 text-left font-bold">
+              <div class="mb-3">部位別に製品を探す</div>
+              <ul class="flex flex-wrap gap-x-12 text-[13px]">
+                <li>
+                  <a href="weightstack.html">胸</a>
+                </li>
+                <li>
+                  <a href="weightstack.html">腕・肩</a>
+                </li>
+                <li>
+                  <a href="weightstack.html">背中</a>
+                </li>
+                <li>
+                  <a href="weightstack.html">脚</a>
+                </li>
+                <li>
+                  <a href="weightstack.html">腹筋・その他</a>
+                </li>
+              </ul>
+            </div>
+            <div id="expert-footer">
+              <div
+                class="absolute top-0 left-0 hidden h-auto w-full bg-black text-left text-white md:relative md:block md:bg-inherit"
+                id="expert">
+                <div
+                  class="mx-5 mt-6 flex items-center border-b py-5 font-bold md:mx-0 md:block md:border-0 md:border-white"
+                  id="return-nav">
+                  <!-- SVG/Icon-Angle-Right -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8.943 12" class="md:hidden">
+                    <path id="Path_2703" data-name="Path 2703"
+                      d="M148.355,371.329l.016.017.03-.034,3.593-4.016h3.536l-4.077,4.558-1.283,1.434-.03.034,1.267,1.417,4.078,4.557h-3.536l-3.593-4.016-1.768-1.976Z"
+                      transform="translate(-146.587 -367.296)" fill="#fff" />
+                  </svg>
+                  <div class="ml-[75px] md:hidden">Expert Model</div>
+                  <a href="expert.html" class="hidden md:inline">Expert Model</a>
+                </div>
+                <div class="grid grid-cols-1 md:flex md:flex-wrap md:justify-between">
+                  <ul class="footer-list">
+                    <li>
+                      <div class="font-bold"><a href="weightstack.html">ウェイトスタック</a></div>
+                    </li>
+                    <li><a href="weightstack.html" class="footer-item">ECHシリーズ</a></li>
+                    <li><a href="weightstack.html" class="footer-item">ECNシリーズ</a></li>
+                    <li><a href="weightstack.html" class="footer-item">LTAシリーズ</a></li>
+                    <li><a href="weightstack.html" class="footer-item">ECNTシリーズ</a></li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li>
+                      <div class="font-bold">プレートロード</a></div>
+                    </li>
+                    <li><a href="weightstack.html" class="footer-item">PHシリーズ</a></li>
+                    <li><a href="weightstack.html" class="footer-item">ETCシリーズ</a></li>
+                    <li><a href="weightstack.html" class="footer-item">X5ECシリーズ</a></li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li><a href="weightstack.html" class="text-[13px] font-bold">ケーブルモーション</a></li>
+                    <li><a href="weightstack.html" class="text-[13px] font-bold">パワーラック&スミスマシン</a></li>
+                    <li><a href="weightstack.html" class="text-[13px] font-bold">カーディオ</a></li>
+                    <li><a href="weightstack.html" class="text-[13px] font-bold">ラック＆ベンチ</a></li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li>
+                      <div class="font-bold"><a href="weightstack.html">アクセサリー</a></div>
+                    </li>
+                    <li><a href="weightstack.html" class="footer-item">ダンベル</a></li>
+                    <li><a href="weightstack.html" class="footer-item">プレート</a></li>
+                    <li><a href="weightstack.html" class="footer-item">X5ECシリーズ</a></li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li>
+                      <div class="invisible">title</div>
+                    </li>
+                    <li><a href="weightstack.html" class="footer-item">アタッチメント</a></li>
+                    <li><a href="weightstack.html" class="footer-item">マット</a></li>
+                    <li><a href="weightstack.html" class="footer-item">その他</a></li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li>
+                      <div class="font-bold"><a href="weightstack.html">その他アイテム</a></div>
+                    </li>
+                    <li><a href="weightstack.html" class="footer-item">オリジナル商品</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-8 text-left">
+              <div class="flex flex-wrap justify-between">
+                <ul class="footer-list">
+                  <li><a href="h&pmodel.html" class="font-bold">Home&Personal Model</a></li>
+                  <li><a href="weightstack.html" class="text-[13px] font-bold">ストレングス</a></li>
+                  <li><a href="weightstack.html" class="text-[13px] font-bold">カーディオ</a></li>
+                  <li><a href="weightstack.html" class="text-[13px] font-bold">Lアクセサリー</a></li>
+                </ul>
+                <ul class="footer-list">
+                  <li><a href="h&pmodel.html" class="font-bold">Wellness Model</a></li>
+                  <li><a href="" class="text-[13px] font-bold">動的ストレッチマシン(ECOST)　</a></li>
+                </ul>
+                <ul class="footer-list">
+                  <li><a href="h&pmodel.html" class="font-bold">Outlet</a></li>
+                </ul>
+                <ul class="footer-list">
+                  <li><a href="contact.html" class="font-bold">セット商品</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-white py-5 text-center md:py-0" id="media" append="sp-move">
+            <div class="my-[30px] text-[15px] font-semibold">公式アカウントをフォローして最新情報を確認！</div>
+            <div class="mx-2 flex max-w-[800px] flex-wrap justify-center gap-[10px] md:mx-auto md:gap-5">
+              <a href="https://www.instagram.com/" class="min-w-[115px] rounded-full border border-white p-4 md:px-9">
+                <div class="flex items-center justify-center">
+                  <!-- SVG/ Icon Instagram -->
+                  <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 448 512 " class="w-4 h-4 fill-white">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7
+                                              74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8
+                                              1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9
+                                              34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5
+                                              9 99.5 9 132.1s2.7 102.7-9 132.1z " />
+                  </svg>
+                  <span class="ml-2 text-[11px] md:text-sm">Instagram</span>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/" class="min-w-[115px] rounded-full border border-white p-4 md:px-9">
+                <div class="flex justify-center">
+                  <!-- SVG/ Icon Youtube -->
+                  <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 576 512 " class="w-4 h-4 fill-white">
+                    <path
+                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003
+                                                              24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305
+                                                              11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z " />
+                  </svg>
+                  <span class="ml-2 text-[11px] md:text-sm">Youtube</span>
+                </div>
+              </a>
+              <a href="https://line.me/ja/" class="min-w-[115px] rounded-full border border-white p-4 md:px-9">
+                <div class="flex justify-center">
+                  <!-- SVG/ Icon Line -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-white">
+                    <path
+                      d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z" />
+                  </svg>
+                  <span class="ml-2 text-[11px] md:text-sm">Line</span>
+                </div>
+              </a>
+              <a href="blog.html" class="min-w-[115px] rounded-full border border-white p-4 md:px-9">
+                <div class="text-[11px] md:text-sm">BLOG</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-xs">
+          <div class="mx-auto block max-w-lg flex-row-reverse justify-between py-4 text-center md:flex">
+            <div>
+              <ul class="flex justify-center gap-x-2">
+                <li><a href="#">定商取引法に基づく表記</a></li>
+                <li class="border-x px-2"><a href="#">Privacy policy</a></li>
+                <li><a href="#">会社概要</a></li>
+              </ul>
+            </div>
+            <div class="mx-8 mt-2 border-t border-white pt-2 md:mx-0 md:mt-0 md:border-none md:pt-0">©2019 AEC
+              CO.,LTD ECOLECO FITNESS</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+@import "./base";
+
+@import "tailwindcss/components";
+@import "./components";
+
+@import "tailwindcss/utilities";
+
+@import "slick-carousel/slick/slick";

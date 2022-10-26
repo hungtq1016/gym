@@ -1,0 +1,62 @@
+@import "./base/body";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@600&family=Rajdhani:wght@300;600;700&display=swap');
+
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W8.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W7.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W6.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W5.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W4.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W3.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W2.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Hiragino Sans';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('/assets/fonts/Hiragino_Sans_W1.woff2') format('woff2');
+}
